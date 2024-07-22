@@ -1,0 +1,63 @@
+@import '_media.scss';
+
+article{
+  h1{
+    font-size: px-to-rem(40);
+    min-width: 256px;
+    @extend %text-center;
+  
+  +p{
+    margin: 27px 0 40px;
+    align-self: stretch;
+    color: #7F757F;
+    font-size: px-to-rem(15);
+    @extend %fw-500;
+    
+    line-height: px-to-rem(20); /* 21.6px */
+    letter-spacing: px-to-rem(0.2);
+    word-spacing: px-to-rem(1);
+  }
+  
+  }
+}
+
+section.rating {
+  @extend %display-flex;
+  @extend %align-items-center;
+  @extend %col;
+  gap: 14px;
+
+
+  div.rating-card{
+    width: 100%;
+    padding: 16px 0;
+    background-color: #F7F3F7;
+    border-radius: 10px;
+
+    .ctn-stars{
+      @extend %display-flex;
+      @extend %align-items-center;
+      @extend %justify-center;
+      gap: px-to-rem(5);
+    }
+
+    p{
+      margin-top: 15px;
+      @extend %fw-700;
+      @extend %color-primary;
+      font-size: px-to-rem(15);
+      line-height: 16.56px;
+    }
+  }
+}
+
+main > div {
+  margin-bottom: 47px;
+}
+
+article.testimony-card {
+  width: 330px;
+  height: 248px;
+  border-radius: 10px;
+  background: #502050;
+}

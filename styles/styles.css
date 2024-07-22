@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+section.rating div.rating-card .ctn-stars, section.rating, body {
+  display: flex;
+}
+
+section.rating, body {
+  flex-direction: column;
+}
+
+section.rating div.rating-card .ctn-stars {
+  justify-content: center;
+}
+
+section.rating div.rating-card .ctn-stars, section.rating, body {
+  align-items: center;
+}
+
+section.rating div.rating-card p {
+  color: hsl(300, 43%, 22%);
+}
+
+article h1, main {
+  text-align: center;
+}
+
+article h1 + p {
+  font-weight: 500;
+}
+
+section.rating div.rating-card p {
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  width: 320px;
+  margin-top: 71px;
+}
+
+article h1 {
+  font-size: 2.6666666667rem;
+  min-width: 256px;
+}
+article h1 + p {
+  margin: 27px 0 40px;
+  align-self: stretch;
+  color: #7F757F;
+  font-size: 1rem;
+  line-height: 1.3333333333rem; /* 21.6px */
+  letter-spacing: 0.0133333333rem;
+  word-spacing: 0.0666666667rem;
+}
+
+section.rating {
+  gap: 14px;
+}
+section.rating div.rating-card {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #F7F3F7;
+  border-radius: 10px;
+}
+section.rating div.rating-card .ctn-stars {
+  gap: 0.3333333333rem;
+}
+section.rating div.rating-card p {
+  margin-top: 15px;
+  font-size: 1rem;
+  line-height: 16.56px;
+}
+
+main > div {
+  margin-bottom: 47px;
+}
+
+article.testimony-card {
+  width: 330px;
+  height: 248px;
+  border-radius: 10px;
+  background: #502050;
+}/*# sourceMappingURL=styles.css.map */
