@@ -19,7 +19,7 @@ body {
 main{
   padding-left: px-to-rem(24);
   padding-right: px-to-rem(24);
-  width: 320px;
+  min-width: 320px;
   margin-top: 71px;
 
   @extend %text-center;

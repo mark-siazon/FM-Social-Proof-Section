@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
-section.rating div.rating-card .ctn-stars, section.rating, body {
+main > section article.testimony-card > div div span {
+  color: hsl(333, 80%, 67%);
+}
+
+article h1 + p {
+  color: hsl(303, 10%, 53%);
+}
+
+section.rating div.rating-card {
+  color: hsl(300, 24%, 96%);
+}
+
+main > section article.testimony-card > div div, main > section article.testimony-card > div, main > section, section.rating div.rating-card .ctn-stars, section.rating, body {
   display: flex;
 }
 
-section.rating, body {
+main > section article.testimony-card > div div, main > section, section.rating, body {
   flex-direction: column;
 }
 
@@ -11,7 +23,11 @@ section.rating div.rating-card .ctn-stars {
   justify-content: center;
 }
 
-section.rating div.rating-card .ctn-stars, section.rating, body {
+main > section article.testimony-card > div div {
+  align-items: flex-start;
+}
+
+main > section article.testimony-card > div, main > section, section.rating div.rating-card .ctn-stars, section.rating, body {
   align-items: center;
 }
 
@@ -23,11 +39,11 @@ article h1, main {
   text-align: center;
 }
 
-article h1 + p {
+main > section article.testimony-card > div div span, article h1 + p {
   font-weight: 500;
 }
 
-section.rating div.rating-card p {
+main > section article.testimony-card > div div, section.rating div.rating-card p {
   font-weight: 700;
 }
 
@@ -46,7 +62,7 @@ body {
 main {
   padding-left: 1.6rem;
   padding-right: 1.6rem;
-  width: 320px;
+  min-width: 320px;
   margin-top: 71px;
 }
 
@@ -57,7 +73,6 @@ article h1 {
 article h1 + p {
   margin: 27px 0 40px;
   align-self: stretch;
-  color: #7F757F;
   font-size: 1rem;
   line-height: 1.3333333333rem; /* 21.6px */
   letter-spacing: 0.0133333333rem;
@@ -70,7 +85,6 @@ section.rating {
 section.rating div.rating-card {
   width: 100%;
   padding: 16px 0;
-  background-color: #F7F3F7;
   border-radius: 10px;
 }
 section.rating div.rating-card .ctn-stars {
@@ -86,9 +100,42 @@ main > div {
   margin-bottom: 47px;
 }
 
-article.testimony-card {
-  width: 330px;
-  height: 248px;
+main > section {
+  width: fit-content;
+  gap: 18px;
+  margin-bottom: 95px;
+}
+main > section article.testimony-card {
+  width: 100%;
+  min-height: 248px;
   border-radius: 10px;
-  background: #502050;
+  background: hsl(300, 43%, 22%);
+  color: hsl(300, 24%, 96%);
+  padding: 2.8rem 2.8rem 3.5333333333rem 2.1333333333rem;
+}
+main > section article.testimony-card > div {
+  gap: 1.0666666667rem;
+  margin-bottom: 23px;
+  height: fit-content;
+  width: fit-content;
+}
+main > section article.testimony-card > div img {
+  border-radius: 50%;
+  width: 40px;
+}
+main > section article.testimony-card > div div {
+  font-size: 1.0666666667rem;
+  gap: 6px;
+}
+main > section article.testimony-card > div div span {
+  font-size: 1rem;
+}
+main > section article.testimony-card blockquote {
+  color: #FFF;
+  text-align: justify;
+  font-size: 1.1333333333rem;
+  font-weight: 400;
+  line-height: 135%; /* 22.95px */
+  letter-spacing: -0.27px;
+  opacity: 0.75;
 }/*# sourceMappingURL=styles.css.map */

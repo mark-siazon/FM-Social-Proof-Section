@@ -9,7 +9,7 @@ article{
   +p{
     margin: 27px 0 40px;
     align-self: stretch;
-    color: #7F757F;
+    @extend %color-dark-gray-magenta;
     font-size: px-to-rem(15);
     @extend %fw-500;
     
@@ -31,7 +31,7 @@ section.rating {
   div.rating-card{
     width: 100%;
     padding: 16px 0;
-    background-color: #F7F3F7;
+    @extend %color-light-gray-magenta;
     border-radius: 10px;
 
     .ctn-stars{
@@ -55,9 +55,63 @@ main > div {
   margin-bottom: 47px;
 }
 
-article.testimony-card {
-  width: 330px;
-  height: 248px;
-  border-radius: 10px;
-  background: #502050;
+
+main > section {
+  width: fit-content; 
+  @extend %display-flex;
+  @extend %align-items-center;
+  @extend %col;
+  gap: 18px;
+  margin-bottom: 95px;
+
+  article.testimony-card {
+    width: 100%;
+    min-height: 248px;
+    border-radius: 10px;
+    background: $very-dark-magenta;
+    color: $light-gray-magenta;
+    padding: px-to-rem(42) px-to-rem(42) px-to-rem(53) px-to-rem(32);
+
+    > div{
+      @extend %display-flex;
+      @extend %align-items-center;
+      gap: px-to-rem(16);
+      margin-bottom: 23px;
+      height: fit-content;
+      width: fit-content;
+
+      img{
+        border-radius: 50%;
+        width: 40px;
+      }
+
+      div{
+        @extend %display-flex;
+        @extend %align-items-start;
+        @extend %col;
+        @extend %fw-700;
+        font-size: px-to-rem(16);
+        gap: 6px;
+
+        span{
+          @extend %color-soft-pink;
+          @extend %fw-500;
+          font-size: px-to-rem(15);
+        }
+      }
+
+    }
+
+    blockquote{
+      color: #FFF;
+      text-align: justify;
+      font-size: px-to-rem(17);
+      font-weight: 400;
+      line-height: 135%; /* 22.95px */
+      letter-spacing: -0.27px;
+      opacity: 0.75;
+    }
+
+  }
+  
 }

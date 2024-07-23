@@ -5,6 +5,26 @@
   @return #{$remValue}rem; 
 }
 
+%color-very-dark-magenta{
+  color: $very-dark-magenta;
+}
+
+%color-soft-pink{
+  color: $soft-pink;
+}
+
+%color-dark-gray-magenta{
+  color: $dark-gray-magenta;
+}
+
+%color-light-gray-magenta{
+  color: $light-gray-magenta;
+}
+
+%color-white{
+  color: $white;
+}
+
 %display-flex{
   display: flex;
 }
