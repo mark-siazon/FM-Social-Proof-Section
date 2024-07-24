@@ -1,7 +1,7 @@
 // Define breakpoints
 $breakpoint-small: 576px;
 $breakpoint-medium: 768px;
-$breakpoint-large: 1024px;
+$breakpoint-large: 1200px;
 
 // Mixin for media queries
 @mixin respond-to($breakpoint) {

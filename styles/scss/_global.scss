@@ -19,25 +19,32 @@ body {
 }
 
 main{
-  padding: px-to-rem(71) px-to-rem(24) px-to-rem(95);
-  min-width: 320px;
   @extend %text-center;
+  padding: px-to-rem(95) px-to-rem(24) 0;
+  min-width: 320px;
+  max-width: 1200px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 0% top 0%, right 0% bottom 0%;
+  background-image: url('/assets/bg-pattern-top-mobile.svg'), url('/assets/bg-pattern-bottom-mobile.svg');
+
+  @include respond-to(large){ 
+    background-image: url('/assets/bg-pattern-top-desktop.svg'), url('/assets/bg-pattern-bottom-desktop.svg');
+  }
 }
 
 blockquote{
-  color: #FFF;
+  @extend %color-white;
+  @extend %fw-400;
   text-align: justify;
   font-size: px-to-rem(17);
-  font-weight: 400;
-  line-height: 135%; /* 22.95px */
+  line-height: 135%;
   letter-spacing: -0.27px;
-  opacity: 0.75;
+  opacity: 0.9;
 
-    @include respond-to(large){
-      text-align: left;
-    }
+  @include respond-to(large){ text-align: left; }
 }
 
 footer{
-  margin-bottom: 20px;
+  margin: 40px 0;
+  @extend %opacity-6;
 }

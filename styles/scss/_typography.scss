@@ -1,30 +1,29 @@
 @import '_variables.scss';
 
-
 article{
   h1{
     font-size: px-to-rem(40);
     @extend %text-center;
+    @extend %color-very-dark-magenta;
 
     @include respond-to(large){
       text-align: left;
       font-size: px-to-rem(54);
-      width: 368px;
+      max-width: 368px;
     }
   
     +p{
       @extend %color-dark-gray-magenta;
       @extend %fw-500;
       font-size: px-to-rem(18);
-      line-height: px-to-rem(20); /* 21.6px */
+      line-height: 120%;
       word-spacing: px-to-rem(1);
       letter-spacing: px-to-rem(0.2);
 
       @include respond-to(large){
         text-align: justify;
         font-size: px-to-rem(18.75);
-        width: 368px;
-        line-height: 120%;
+        max-width: 368px;
         letter-spacing: px-to-rem(-1);
       }
     }
@@ -37,7 +36,6 @@ div.rating-card{
     @extend %fw-700;
     @extend %color-very-dark-magenta;
     font-size: px-to-rem(18);
-    line-height: 16.56px;
   }
 }
 
@@ -61,7 +59,7 @@ footer{
 
   a{
     line-height: 1.25rem;
-    opacity: 0.6;
+    @extend %opacity-6;
     
     &:hover{
       @extend %color-soft-pink;

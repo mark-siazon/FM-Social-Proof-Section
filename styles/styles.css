@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+footer a, footer {
+  opacity: 0.6;
+}
+
 footer, article h1, main {
   text-align: center;
+}
+
+blockquote {
+  font-weight: 400;
 }
 
 div.profile span, article h1 + p {
@@ -11,7 +19,7 @@ div.profile, div.rating-card p {
   font-weight: 700;
 }
 
-div.rating-card p {
+div.rating-card p, article h1 {
   color: hsl(300, 43%, 22%);
 }
 
@@ -23,15 +31,19 @@ article h1 + p {
   color: hsl(303, 10%, 53%);
 }
 
-article.testimony-card, section.rating div.rating-card {
+article.testimony-card, div.rating-card {
   color: hsl(300, 24%, 96%);
 }
 
-div.profile, article.testimony-card > div, .ctn-stars, section.rating div.rating-card, section.rating, main > section, body {
+blockquote {
+  color: hsl(0, 0%, 100%);
+}
+
+div.profile, article.testimony-card > div, div.ctn-stars, div.rating-card, section.rating, main > section, body {
   display: flex;
 }
 
-div.profile, section.rating div.rating-card, section.rating, main > section, body {
+div.profile, div.rating-card, section.rating, main > section, body {
   flex-direction: column;
 }
 
@@ -39,7 +51,7 @@ div.profile {
   align-items: flex-start;
 }
 
-article.testimony-card > div, .ctn-stars, section.rating div.rating-card, section.rating, main > section, body {
+article.testimony-card > div, div.ctn-stars, div.rating-card, section.rating, main > section, body {
   align-items: center;
 }
 
@@ -57,27 +69,34 @@ body {
 }
 
 main {
-  padding: 4.7333333333rem 1.6rem 6.3333333333rem;
+  padding: 6.3333333333rem 1.6rem 0;
   min-width: 320px;
+  max-width: 1200px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 0% top 0%, right 0% bottom 0%;
+  background-image: url("/assets/bg-pattern-top-mobile.svg"), url("/assets/bg-pattern-bottom-mobile.svg");
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    background-image: url("/assets/bg-pattern-top-desktop.svg"), url("/assets/bg-pattern-bottom-desktop.svg");
+  }
 }
 
 blockquote {
-  color: #FFF;
   text-align: justify;
   font-size: 1.1333333333rem;
-  font-weight: 400;
-  line-height: 135%; /* 22.95px */
+  line-height: 135%;
   letter-spacing: -0.27px;
-  opacity: 0.75;
+  opacity: 0.9;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   blockquote {
     text-align: left;
   }
 }
 
 footer {
-  margin-bottom: 20px;
+  margin: 40px 0;
 }
 
 article h1 {
@@ -90,23 +109,24 @@ article h1 + p {
 main > section {
   width: fit-content;
   gap: 18px;
-  margin-top: 3.1333333333rem;
+  margin-top: 4rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   main > section {
     align-items: flex-start;
     flex-direction: row;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   main > div {
     display: flex;
     height: fit-content;
     justify-content: space-between;
+    gap: 225px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   main > div section:nth-child(1) {
     width: 368px;
     height: 255px;
@@ -116,28 +136,21 @@ main > section {
 section.rating {
   gap: 14px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   section.rating {
     width: 530px;
     height: 208px;
   }
 }
-section.rating div.rating-card {
+
+div.rating-card {
   background: hsl(300, 24%, 96%);
   width: 100%;
   border-radius: 10px;
   padding: 16px 0;
 }
-section.rating div.rating-card p {
-  margin-top: 1rem;
-}
-@media only screen and (min-width: 1024px) {
-  section.rating div.rating-card p {
-    margin-top: 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  section.rating div.rating-card {
+@media only screen and (min-width: 1200px) {
+  div.rating-card {
     flex-direction: row;
     justify-content: center;
     gap: 25px;
@@ -146,60 +159,67 @@ section.rating div.rating-card p {
     padding: 0px 15px;
   }
 }
-@media only screen and (min-width: 1024px) {
-  section.rating div.rating-card:nth-child(1) {
+@media only screen and (min-width: 1200px) {
+  div.rating-card:nth-child(1) {
     margin-right: 100px;
   }
 }
-@media only screen and (min-width: 1024px) {
-  section.rating div.rating-card:nth-child(2) {
+@media only screen and (min-width: 1200px) {
+  div.rating-card:nth-child(2) {
     margin: 0 50px;
   }
 }
-@media only screen and (min-width: 1024px) {
-  section.rating div.rating-card:nth-child(3) {
+@media only screen and (min-width: 1200px) {
+  div.rating-card:nth-child(3) {
     margin-left: 100px;
   }
 }
+div.rating-card p {
+  margin-top: 1rem;
+}
+@media only screen and (min-width: 1200px) {
+  div.rating-card p {
+    margin-top: 0;
+  }
+}
 
-.ctn-stars {
+div.ctn-stars {
   gap: 0.3333333333rem;
 }
-@media only screen and (min-width: 1024px) {
-  .ctn-stars {
+@media only screen and (min-width: 1200px) {
+  div.ctn-stars {
     gap: 0.6666666667rem;
   }
 }
 
 article.testimony-card {
   width: 100%;
-  min-height: 248px;
   border-radius: 10px;
   background: hsl(300, 43%, 22%);
   padding: 2.8rem 2.8rem 3.5333333333rem 2.1333333333rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   article.testimony-card {
-    width: 330px;
-    min-height: 248px;
+    padding: 2.6666666667rem 2rem;
+    max-height: 248px;
   }
 }
 article.testimony-card > div {
-  gap: 1.0666666667rem;
-  margin-bottom: 23px;
   height: fit-content;
   width: fit-content;
+  gap: 1.0666666667rem;
+  margin-bottom: 23px;
 }
 article.testimony-card > div img {
   border-radius: 50%;
   width: 40px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   article.testimony-card:nth-child(2) {
-    margin: 20px 0 25px;
+    margin: 30px 0 0;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   article.testimony-card:nth-child(3) {
     margin-top: 45px;
   }
@@ -213,32 +233,30 @@ div.profile {
 article h1 {
   font-size: 2.6666666667rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   article h1 {
     text-align: left;
     font-size: 3.6rem;
-    width: 368px;
+    max-width: 368px;
   }
 }
 article h1 + p {
   font-size: 1.2rem;
-  line-height: 1.3333333333rem; /* 21.6px */
+  line-height: 120%;
   word-spacing: 0.0666666667rem;
   letter-spacing: 0.0133333333rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   article h1 + p {
     text-align: justify;
     font-size: 1.25rem;
-    width: 368px;
-    line-height: 120%;
+    max-width: 368px;
     letter-spacing: -0.0666666667rem;
   }
 }
 
 div.rating-card p {
   font-size: 1.2rem;
-  line-height: 16.56px;
 }
 
 div.profile {
@@ -250,7 +268,6 @@ div.profile span {
 
 footer a {
   line-height: 1.25rem;
-  opacity: 0.6;
 }
 footer a:hover {
   text-decoration: none;
