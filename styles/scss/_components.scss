@@ -1,12 +1,9 @@
 @import '_media.scss';
 
+// ---------- Header Section ----------
 article{
-  h1{
-    min-width: 256px;
-
-    +p{
-      margin: 27px 0 40px;
-    }
+  h1{ min-width: 256px;
+    +p{ margin: 27px 0 40px; }
   }
 }
 
@@ -16,20 +13,21 @@ main > section {
   @extend %col;
   width: fit-content; 
   gap: 18px;
-  margin-top: px-to-rem(47);
+  margin-top: px-to-rem(60);
 
   @include respond-to(large){
-    // background: rgb(4, 2, 44);
     align-items: flex-start;
     flex-direction: row;
   }
 }
 
+// ---------- Ratings Section ----------
 main > div{
   @include respond-to(large){
     display: flex;
     height: fit-content;
     justify-content: space-between;
+    gap: 225px;
   }
 
   section:nth-child(1){
@@ -50,87 +48,69 @@ section.rating {
     width: 530px;
     height: 208px;
   }
+}
 
-  div.rating-card{
-    @extend %display-flex;
-    @extend %col;
-    @extend %align-items-center;
-    @extend %color-light-gray-magenta;
-    background: $light-gray-magenta;
-    width: 100%;
-    border-radius: 10px;
-    padding: 16px 0;
+div.rating-card{
+  @extend %display-flex;
+  @extend %col;
+  @extend %align-items-center;
+  @extend %color-light-gray-magenta;
+  background: $light-gray-magenta;
+  width: 100%;
+  border-radius: 10px;
+  padding: 16px 0;
 
-    p{
-      margin-top: px-to-rem(15);
-      @include respond-to(large){
-        margin-top: 0;
-      }
-    }
+  @include respond-to(large){
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    width: 430px;
+    height: 60px;
+    padding: 0px 15px;
+  }
 
-    @include respond-to(large){
-      flex-direction: row;
-      justify-content: center;
-      gap: 25px;
-      width: 430px;
-      height: 60px;
-      padding: 0px 15px;
-    }
+  &:nth-child(1){
+    @include respond-to(large){ margin-right: 100px;}}
+  &:nth-child(2){
+    @include respond-to(large){ margin: 0 50px;}}
+  &:nth-child(3){
+    @include respond-to(large){ margin-left: 100px;}
+  }
 
-    &:nth-child(1){
-      @include respond-to(large){
-        margin-right: 100px;
-        // background: red;
-      }
-    }
-
-    &:nth-child(2){
-      @include respond-to(large){
-        margin: 0 50px;
-        // background: rgb(116, 116, 215);
-      }
-    }
-
-    &:nth-child(3){
-      @include respond-to(large){
-        margin-left: 100px;
-        // background: rgb(128, 61, 175);
-      }
-    }
+  p{ margin-top: px-to-rem(15);
+    @include respond-to(large){ margin-top: 0;}
   }
 }
 
-.ctn-stars{
+div.ctn-stars{
   @extend %display-flex;
   @extend %align-items-center;
   gap: px-to-rem(5);
 
   @include respond-to(large){
-    // background: aqua;
     gap: px-to-rem(10);
   }
 }
 
+// ---------- Testimonial Section ----------
 article.testimony-card {
   width: 100%;
-  min-height: 248px;
   border-radius: 10px;
   background: $very-dark-magenta;
   padding: px-to-rem(42) px-to-rem(42) px-to-rem(53) px-to-rem(32);
 
   @include respond-to(large){
-    // background: rgb(36, 75, 62);
-    width: 330px;
-    min-height: 248px;
+    padding: px-to-rem(40) px-to-rem(30);
+    max-height: 248px;
   }
 
   > div{
     @extend %display-flex;
     @extend %align-items-center;
-    gap: px-to-rem(16);
-    margin-bottom: 23px;
     height: fit-content;
     width: fit-content;
+    gap: px-to-rem(16);
+    margin-bottom: 23px;
 
     img{
       border-radius: 50%;
@@ -138,19 +118,11 @@ article.testimony-card {
     }
   }
 
-  &:nth-child(2){
-    @include respond-to(large){
-      // background: rgb(158, 96, 25);
-      margin: 20px 0 25px;
-    }
-  }
+  &:nth-child(2){ 
+    @include respond-to(large){margin: 30px 0 0;}}
 
   &:nth-child(3){
-    @include respond-to(large){
-      // background: rgb(25, 60, 158);
-      margin-top: 45px;
-    }
-  }
+    @include respond-to(large){margin-top: 45px;}}
 }
 
 div.profile{
