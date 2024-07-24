@@ -5,50 +5,29 @@
   @return #{$remValue}rem; 
 }
 
-%display-flex{
-  display: flex;
-}
+// <-----> Typography Placeholder <----->
+%text-center{ text-align: center;}
 
-%col{
-  flex-direction: column;
-}
+%fw-400{ font-weight: 400;}
+%fw-500{ font-weight: 500;}
+%fw-700{ font-weight: 700;}
 
-%row{
-  flex-direction: row;
-}
+// <-----> Font-color Placeholder <----->
+//Primary Colors
+%color-very-dark-magenta{ color: $very-dark-magenta; }
+%color-soft-pink{ color: $soft-pink; }
+//Neutral Colors
+%color-dark-gray-magenta{ color: $dark-gray-magenta; }
+%color-light-gray-magenta{ color: $light-gray-magenta; }
+%color-white{ color: $white; }
 
-%justify-center{
-  justify-content: center;
-}
+// <-----> Flex Placeholder <----->
+%display-flex{ display: flex; }
+%col{ flex-direction: column; }
+%row{ flex-direction: row; }
 
-%align-items-start{
-  align-items: flex-start;
-}
+%justify-center{ justify-content: center; }
 
-%align-items-end{
-  align-items: end;
-}
-
-%align-items-center{
-  align-items: center;
-}
-
-%color-primary{
-  color: $very-dark-magenta;
-}
-
-%text-center{
-  text-align: center;
-}
-
-%fw-400{
-  font-weight: 400;
-}
-
-%fw-500{
-  font-weight: 500;
-}
-
-%fw-700{
-  font-weight: 700;
-}
+%align-items-start{ align-items: flex-start; }
+%align-items-end{ align-items: end; }
+%align-items-center{ align-items: center; }

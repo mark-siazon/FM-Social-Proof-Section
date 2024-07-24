@@ -2,62 +2,161 @@
 
 article{
   h1{
-    font-size: px-to-rem(40);
     min-width: 256px;
-    @extend %text-center;
-  
-  +p{
-    margin: 27px 0 40px;
-    align-self: stretch;
-    color: #7F757F;
-    font-size: px-to-rem(15);
-    @extend %fw-500;
-    
-    line-height: px-to-rem(20); /* 21.6px */
-    letter-spacing: px-to-rem(0.2);
-    word-spacing: px-to-rem(1);
+
+    +p{
+      margin: 27px 0 40px;
+    }
   }
-  
+}
+
+main > section {
+  @extend %display-flex;
+  @extend %align-items-center;
+  @extend %col;
+  width: fit-content; 
+  gap: 18px;
+  margin-top: px-to-rem(47);
+
+  @include respond-to(large){
+    // background: rgb(4, 2, 44);
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+main > div{
+  @include respond-to(large){
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+  }
+
+  section:nth-child(1){
+    @include respond-to(large){
+      width: 368px;
+      height: 255px;
+    }
   }
 }
 
 section.rating {
   @extend %display-flex;
-  @extend %align-items-center;
   @extend %col;
+  @extend %align-items-center;
   gap: 14px;
 
+  @include respond-to(large){
+    width: 530px;
+    height: 208px;
+  }
 
   div.rating-card{
+    @extend %display-flex;
+    @extend %col;
+    @extend %align-items-center;
+    @extend %color-light-gray-magenta;
+    background: $light-gray-magenta;
     width: 100%;
-    padding: 16px 0;
-    background-color: #F7F3F7;
     border-radius: 10px;
-
-    .ctn-stars{
-      @extend %display-flex;
-      @extend %align-items-center;
-      @extend %justify-center;
-      gap: px-to-rem(5);
-    }
+    padding: 16px 0;
 
     p{
-      margin-top: 15px;
-      @extend %fw-700;
-      @extend %color-primary;
-      font-size: px-to-rem(15);
-      line-height: 16.56px;
+      margin-top: px-to-rem(15);
+      @include respond-to(large){
+        margin-top: 0;
+      }
+    }
+
+    @include respond-to(large){
+      flex-direction: row;
+      justify-content: center;
+      gap: 25px;
+      width: 430px;
+      height: 60px;
+      padding: 0px 15px;
+    }
+
+    &:nth-child(1){
+      @include respond-to(large){
+        margin-right: 100px;
+        // background: red;
+      }
+    }
+
+    &:nth-child(2){
+      @include respond-to(large){
+        margin: 0 50px;
+        // background: rgb(116, 116, 215);
+      }
+    }
+
+    &:nth-child(3){
+      @include respond-to(large){
+        margin-left: 100px;
+        // background: rgb(128, 61, 175);
+      }
     }
   }
 }
 
-main > div {
-  margin-bottom: 47px;
+.ctn-stars{
+  @extend %display-flex;
+  @extend %align-items-center;
+  gap: px-to-rem(5);
+
+  @include respond-to(large){
+    // background: aqua;
+    gap: px-to-rem(10);
+  }
 }
 
 article.testimony-card {
-  width: 330px;
-  height: 248px;
+  width: 100%;
+  min-height: 248px;
   border-radius: 10px;
-  background: #502050;
+  background: $very-dark-magenta;
+  padding: px-to-rem(42) px-to-rem(42) px-to-rem(53) px-to-rem(32);
+
+  @include respond-to(large){
+    // background: rgb(36, 75, 62);
+    width: 330px;
+    min-height: 248px;
+  }
+
+  > div{
+    @extend %display-flex;
+    @extend %align-items-center;
+    gap: px-to-rem(16);
+    margin-bottom: 23px;
+    height: fit-content;
+    width: fit-content;
+
+    img{
+      border-radius: 50%;
+      width: 40px;
+    }
+  }
+
+  &:nth-child(2){
+    @include respond-to(large){
+      // background: rgb(158, 96, 25);
+      margin: 20px 0 25px;
+    }
+  }
+
+  &:nth-child(3){
+    @include respond-to(large){
+      // background: rgb(25, 60, 158);
+      margin-top: 45px;
+    }
+  }
+}
+
+div.profile{
+  @extend %display-flex;
+  @extend %col;
+  @extend %align-items-start;
+  font-size: px-to-rem(16);
+  gap: 6px;
 }
