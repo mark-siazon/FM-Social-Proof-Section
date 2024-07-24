@@ -5,70 +5,29 @@
   @return #{$remValue}rem; 
 }
 
-%color-very-dark-magenta{
-  color: $very-dark-magenta;
-}
+// <-----> Typography Placeholder <----->
+%text-center{ text-align: center;}
 
-%color-soft-pink{
-  color: $soft-pink;
-}
+%fw-400{ font-weight: 400;}
+%fw-500{ font-weight: 500;}
+%fw-700{ font-weight: 700;}
 
-%color-dark-gray-magenta{
-  color: $dark-gray-magenta;
-}
+// <-----> Font-color Placeholder <----->
+//Primary Colors
+%color-very-dark-magenta{ color: $very-dark-magenta; }
+%color-soft-pink{ color: $soft-pink; }
+//Neutral Colors
+%color-dark-gray-magenta{ color: $dark-gray-magenta; }
+%color-light-gray-magenta{ color: $light-gray-magenta; }
+%color-white{ color: $white; }
 
-%color-light-gray-magenta{
-  color: $light-gray-magenta;
-}
+// <-----> Flex Placeholder <----->
+%display-flex{ display: flex; }
+%col{ flex-direction: column; }
+%row{ flex-direction: row; }
 
-%color-white{
-  color: $white;
-}
+%justify-center{ justify-content: center; }
 
-%display-flex{
-  display: flex;
-}
-
-%col{
-  flex-direction: column;
-}
-
-%row{
-  flex-direction: row;
-}
-
-%justify-center{
-  justify-content: center;
-}
-
-%align-items-start{
-  align-items: flex-start;
-}
-
-%align-items-end{
-  align-items: end;
-}
-
-%align-items-center{
-  align-items: center;
-}
-
-%color-primary{
-  color: $very-dark-magenta;
-}
-
-%text-center{
-  text-align: center;
-}
-
-%fw-400{
-  font-weight: 400;
-}
-
-%fw-500{
-  font-weight: 500;
-}
-
-%fw-700{
-  font-weight: 700;
-}
+%align-items-start{ align-items: flex-start; }
+%align-items-end{ align-items: end; }
+%align-items-center{ align-items: center; }

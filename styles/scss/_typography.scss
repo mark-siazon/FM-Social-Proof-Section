@@ -1,1 +1,72 @@
 @import '_variables.scss';
+
+
+article{
+  h1{
+    font-size: px-to-rem(40);
+    @extend %text-center;
+
+    @include respond-to(large){
+      text-align: left;
+      font-size: px-to-rem(54);
+      width: 368px;
+    }
+  
+    +p{
+      @extend %color-dark-gray-magenta;
+      @extend %fw-500;
+      font-size: px-to-rem(18);
+      line-height: px-to-rem(20); /* 21.6px */
+      word-spacing: px-to-rem(1);
+      letter-spacing: px-to-rem(0.2);
+
+      @include respond-to(large){
+        text-align: justify;
+        font-size: px-to-rem(18.75);
+        width: 368px;
+        line-height: 120%;
+        letter-spacing: px-to-rem(-1);
+      }
+    }
+  }
+}
+
+
+div.rating-card{
+  p{
+    @extend %fw-700;
+    @extend %color-very-dark-magenta;
+    font-size: px-to-rem(18);
+    line-height: 16.56px;
+  }
+}
+
+article.testimony-card {
+  @extend %color-light-gray-magenta;
+}
+
+div.profile{
+  font-size: px-to-rem(16);
+  @extend %fw-700;
+
+  span{
+    @extend %color-soft-pink;
+    @extend %fw-500;
+    font-size: px-to-rem(15);
+  }
+}
+
+footer{
+  @extend %text-center;
+
+  a{
+    line-height: 1.25rem;
+    opacity: 0.6;
+    
+    &:hover{
+      @extend %color-soft-pink;
+      text-decoration: none;
+      opacity: 1;
+    }
+  }
+}
